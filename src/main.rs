@@ -30,7 +30,8 @@ mod tests {
 
     #[test]
     fn test_calculate_bac() {
-        assert_eq!(calculate_bac(130.0, Gender::Male, 5.0, 18.0, 2.0), 4.6);
+        assert_eq!(calculate_bac(130.0, Gender::Male, 5.0, 18.0, 2.0), 4.84);
+        assert_eq!(calculate_bac(130.0, Gender::Female, 5.0, 18.0, 2.0), 5.36);
     }
 }
 
