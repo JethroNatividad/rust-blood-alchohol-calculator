@@ -66,7 +66,8 @@ def get_gender() -> Gender {
 fn main() {
     let weight_lbs: f64 = get_input("What is your weight in lbs? ");
     let gender: Gender = get_gender();
-    let n_drinks: f64 = get_input("What is your weight in lbs? ");
+    let n_drinks: f64 = get_input("How many drinks did you drink? ");
+    let drink_alchohol_volume: f64 = get_input("How much alchohol(oz) was in per drink? ");
+    let hours_since_last_drink: f64 = get_input("How many hours since your last drink? ");
 
-    
 }
