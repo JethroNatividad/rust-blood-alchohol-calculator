@@ -3,6 +3,15 @@
 // Process: get total oz of alchohol in oz, r = 0.73 for men else 0.66, bac = (A × 5.14 / W × r) − .015 × H
 // Output: Your BAC is {}. /n It is not legal for you to drive.
 
+enum Gender {
+    Male = 0,
+    Female = 1
+}
+
+fn calculate_bac(weight: f64, gender: Gender, n_drink: f64, drink_volume: f64, hours_since_last_drink: f64) {
+    
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
