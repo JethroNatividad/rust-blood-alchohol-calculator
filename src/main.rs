@@ -4,8 +4,8 @@
 // Output: Your BAC is {}. /n It is not legal for you to drive.
 
 enum Gender {
-    Male = 0,
-    Female = 1
+    Male: u32 = 0,
+    Female: u32 = 1
 }
 
 fn round_decimal(number: f64, place: i32) -> f64 {
@@ -50,6 +50,21 @@ fn get_input<T: std::str::FromStr>(prompt: &str) -> T {
     }
 }
 
+
+def get_gender() -> Gender {
+    loop {
+        let gender_input: u32 = get_input("What is your gender? (0 for Male, 1 for Female) ");
+
+        match gender_input {
+            0 => break Gender::Male,
+            1 => break Gender::Female,
+            _ => println!("Invalid input. Please try again.");
+        }
+    }
+}
+
 fn main() {
-    calculate_bac(130.0, Gender::Male, 5.0, 18.0, 2.0);
+    let weight_lbs: f64 = get_input("What is your weight in lbs? ");
+    let gender_input: u32 = get_input("What is your gender (0 for Male, 1 for Female)");
+    
 }
