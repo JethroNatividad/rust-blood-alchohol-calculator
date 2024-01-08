@@ -75,12 +75,10 @@ fn main() {
 
     let bac: f64 = calculate_bac(weight_lbs, gender, n_drinks, drink_alchohol_volume, hours_since_last_drink);
 
-    
-    match bac {
-        value if value >= ILLEGAL_BAC_TO_DRIVE => println!("Your BAC is {}.\nIt is legal for you to drive.", value),
-        value if value < ILLEGAL_BAC_TO_DRIVE => println!("Your BAC is {}.\nIt is not legal for you to drive.", value),
-        _ => println!("Something went wrong.")
-        
+    if bac >= ILLEGAL_BAC_TO_DRIVE {
+        println!("Your BAC is {}.\nIt is not legal for you to drive.", bac)
+    } else {
+        println!("Your BAC is {}.\nIt is legal for you to drive.", bac)
     }
 
 }
